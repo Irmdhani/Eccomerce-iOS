@@ -28,7 +28,7 @@ struct ProductDetailView: View {
                         .multilineTextAlignment(.center)
                     
                     HStack {
-                        Text("Price: $\(product.price)")
+                        Text("Price: $ \(String(format: "%.2f", product.price))")
                             .font(.title2)
                             .foregroundColor(.green)
                         
@@ -44,7 +44,7 @@ struct ProductDetailView: View {
                         }
                     }
                     
-                    Text("Rating: \(String(format: "%.1f", product.rating)) / 5 ⭐️")
+                  Text("Rating: \(String(format: "%.1f", product.rating)) / 5 ⭐️")
                         .font(.subheadline)
                         .foregroundColor(.orange)
                     
@@ -115,3 +115,4 @@ struct ProductDetailView: View {
         }
     }
 }
+
